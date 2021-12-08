@@ -1,0 +1,161 @@
+*% 1.0.0.58
+
+*ModelName: "DYMO LabelWriter 5XL Pro"
+*GPDFileName: "lw5xlpro.gpd"
+
+*Include: "lwxl.gpd"
+
+*Feature: PaperSize
+{
+   *rcNameID: =PAPER_SIZE_DISPLAY
+   *DefaultOption: Shipping4x6
+
+   *Option: AddressHorizontal
+   {
+      *rcNameID: 425
+      *OptionID: 520
+      *PageDimensions: PAIR(1050, 329)
+      *PrintableArea: PAIR(963, 299)
+      *PrintableOrigin: PAIR(69, 12)
+      *Command: CmdSelect
+      {
+         *Order: DOC_SETUP.7
+         *Cmd: "<1B>L<0275>"
+      }
+      *Constraints: LIST(ContinuousMode.OptionON)
+   }
+
+   *Option: LargeShippingHorizontal
+   {
+      *rcNameID: 428
+      *OptionID: 523
+      *PageDimensions: PAIR(1200, 694)
+      *PrintableArea: PAIR(1112, 665)
+      *PrintableOrigin: PAIR(70, 12)
+      *Command: CmdSelect
+      {
+         *Order: DOC_SETUP.7
+         *Cmd: "<1B>L<03E2>"
+      }
+      *Constraints: LIST(ContinuousMode.OptionON)
+   }
+
+   *Option: Banner4
+   {
+      *rcNameID: 424
+      *OptionID: 424
+      *PageDimensions: PAIR(1282, 32000)
+      *PrintableArea: PAIR(1248, 31862)
+      *PrintableOrigin: PAIR(17, 67)
+      *Command: CmdSelect
+      {
+          *Order: DOC_SETUP.7
+          *Cmd: "<1B>L<FFFF>"
+      }
+      *Constraints: LIST(ContinuousMode.OptionON)
+   }
+
+   *Option: Shipping4x6
+   {
+      *rcNameID: 420
+      *OptionID: 420
+      *PageDimensions: PAIR(1233, 1883)
+      *PrintableArea: PAIR(1200, 1800)
+      *PrintableOrigin: PAIR(17, 66)
+      *Command: CmdSelect
+      {
+         *Order: DOC_SETUP.7
+         *Cmd: "<1B>L<0867>"
+      }
+      *Constraints: LIST(ContinuousMode.OptionON)
+   }
+
+   *Option: Shipping4x10
+   {
+      *rcNameID: 423
+      *OptionID: 423
+      *PageDimensions: PAIR(1320, 3000)
+      *PrintableArea: PAIR(1248, 2926)
+      *PrintableOrigin: PAIR(37, 56)
+      *Command: CmdSelect
+      {
+         *Order: DOC_SETUP.7
+         *Cmd: "<1B>L<B80B>"
+      }
+      *Constraints: LIST(ContinuousMode.OptionON)
+   }
+
+   *Option: DHL2166659
+   {
+      *rcNameID: 429
+      *OptionID: 429
+      *PageDimensions: PAIR(1204, 2480)
+      *PrintableArea: PAIR(1130, 2368)
+      *PrintableOrigin: PAIR(37, 56)
+      *Command: CmdSelect
+      {
+         *Order: DOC_SETUP.7
+         *Cmd: "<1B>L<B009>"
+      }
+      *Constraints: LIST(ContinuousMode.OptionON)
+   }
+
+   *Option: CUSTOMSIZE
+   {
+      *rcNameID: =USER_DEFINED_SIZE_DISPLAY
+      *MinSize: PAIR(200, 300)
+      *MaxSize: PAIR(1350, 32000)
+      *MaxPrintableWidth: 1248
+      *MinLeftMargin: 0
+      *CenterPrintable?: FALSE
+      *Command: CmdSelect
+      {
+         *Order: DOC_SETUP.7
+         *Cmd: "<1B>L<7F00>"
+      }
+   }
+}
+
+*switch: PaperSize
+{
+   *case: N30334
+   {
+      *Command: CmdEndJob
+      {
+         *Order: JOB_FINISH.1
+         *Cmd: ""
+      }
+   }
+   *case: ContinuousWide
+   {
+      *Command: CmdEndJob
+      {
+         *Order: JOB_FINISH.1
+         *Cmd: ""
+      }
+   }
+   *case: Banner
+   {
+      *Command: CmdEndJob
+      {
+         *Order: JOB_FINISH.1
+         *Cmd: ""
+      }
+    }
+   *case: Banner4
+   {
+      *Command: CmdEndJob
+      {
+         *Order: JOB_FINISH.1
+         *Cmd: ""
+      }
+   }
+   *default
+   {
+      *Command: CmdEndJob
+      {
+         *Order: JOB_FINISH.1
+         *Cmd: ""
+      }
+   }
+}

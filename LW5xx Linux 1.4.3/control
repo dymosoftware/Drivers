@@ -1,0 +1,9 @@
+Package: dymo-cups-drivers
+Priority: extra
+Section: checkinstall
+Installed-Size: 472
+Maintainer: philipp.ineichen@dymo.com
+Architecture: i386
+Version: 0.4-1
+Depends: 
+Description: DYMO drivers for CUPS
