@@ -1,0 +1,27 @@
+*% 1.0.0.58
+
+*ModelName: "DYMO LabelWriter 550 Twin Turbo Pro"
+*GPDFileName: "lw550ttp.gpd"
+
+*Include: "lw5xx.gpd"
+
+*Feature: InputBin
+{
+    *rcNameID: =PAPER_SOURCE_DISPLAY
+	*DefaultOption: OptionAuto
+    *Option: OptionAuto
+    {
+        *rcNameID: 322
+        *Cmd: "<1B>q0"
+    }
+    *Option: OptionLeft
+    {
+        *rcNameID: 320
+        *Cmd: "<1B>q1"
+    }
+    *Option: OptionRight
+    {
+        *rcNameID: 321
+        *Cmd: "<1B>q2"
+    }
+}

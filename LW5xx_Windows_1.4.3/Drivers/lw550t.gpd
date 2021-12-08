@@ -1,0 +1,6 @@
+*% 1.0.0.58
+
+*ModelName: "DYMO LabelWriter 550 Turbo"
+*GPDFileName: "lw550t.gpd"
+
+*Include: "lw5xx.gpd"

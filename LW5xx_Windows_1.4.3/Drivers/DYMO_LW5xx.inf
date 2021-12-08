@@ -1,0 +1,186 @@
+; DYMO LabelWriter 5xx Installation File
+; Copyright (c) 2020 Sanford, L.P.
+
+[Version]
+Signature="$Windows NT$"
+Provider=DYMO
+ClassGUID={4D36E979-E325-11CE-BFC1-08002BE10318}
+Class=Printer
+DriverPackageType=PlugAndPlay
+DriverPackageDisplayName="DYMO LabelWriter 5xx Printer Driver"
+CatalogFile.NT=DYMO.CAT
+DriverVer=11/02/2021,1.1.0.143
+
+;
+; Manufacturer section.
+;
+; This section lists all of the manufacturers 
+; that we will display in the Dialog box
+;
+[Manufacturer]
+"DYMO" = DYMO, NTx86.6.3, NTamd64.6.3
+
+;
+; Model sections
+; 
+; Each section here corresponds with an entry listed in the
+; [Manufacturer] section, above. The models will be displayed in the order
+; that they appear in the INF file.
+;
+; Only supporting Windows 8.1 and newer (osver 6.3)
+;
+[DYMO.NTx86.6.3]
+"DYMO LabelWriter 550"                 = LW_550,           USBPRINT\DYMOLabelWriter_550C80D
+"DYMO LabelWriter 550 Turbo"           = LW_550_TURBO,     USBPRINT\DYMOLabelWriter_550_3A05
+"DYMO LabelWriter 5XL"                 = LW_5XL,           USBPRINT\DYMOLabelWriter_5XLB920
+"DYMO LabelWriter 550 Pro"             = LW_550_PRO,       USBPRINT\DYMOLabelWriter_550_0FEC
+"DYMO LabelWriter 5XL Pro"             = LW_5XL_PRO,       USBPRINT\DYMOLabelWriter_5XL_78B5
+"DYMO LabelWriter 550 Twin Turbo Pro"  = LW_550_TWIN_PRO,  USBPRINT\DYMOLabelWriter_550_C240
+                                       
+[DYMO.NTamd64.6.3]
+"DYMO LabelWriter 550"                 = LW_550,           USBPRINT\DYMOLabelWriter_550C80D
+"DYMO LabelWriter 550 Turbo"           = LW_550_TURBO,     USBPRINT\DYMOLabelWriter_550_3A05
+"DYMO LabelWriter 5XL"                 = LW_5XL,           USBPRINT\DYMOLabelWriter_5XLB920
+"DYMO LabelWriter 550 Pro"             = LW_550_PRO,       USBPRINT\DYMOLabelWriter_550_0FEC
+"DYMO LabelWriter 5XL Pro"             = LW_5XL_PRO,       USBPRINT\DYMOLabelWriter_5XL_78B5
+"DYMO LabelWriter 550 Twin Turbo Pro"  = LW_550_TWIN_PRO,  USBPRINT\DYMOLabelWriter_550_C240
+
+[DYMO]
+"DYMO LabelWriter 550"                 = LW_550,           USBPRINT\DYMOLabelWriter_550C80D
+"DYMO LabelWriter 550 Turbo"           = LW_550_TURBO,     USBPRINT\DYMOLabelWriter_550_3A05
+"DYMO LabelWriter 5XL"                 = LW_5XL,           USBPRINT\DYMOLabelWriter_5XLB920
+"DYMO LabelWriter 550 Pro"             = LW_550_PRO,       USBPRINT\DYMOLabelWriter_550_0FEC
+"DYMO LabelWriter 5XL Pro"             = LW_5XL_PRO,       USBPRINT\DYMOLabelWriter_5XL_78B5
+"DYMO LabelWriter 550 Twin Turbo Pro"  = LW_550_TWIN_PRO,  USBPRINT\DYMOLabelWriter_550_C240
+
+;
+; Installer Sections
+;
+; These sections control file installation, and reference all files that
+; need to be copied. The section name will be assumed to be the driver
+; file, unless there is an explicit DriverFile section listed.
+;
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; LW 550
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[LW_550]
+CopyFiles=@lw550.GPD, LW5XX_OEMUNI, LW5XXMON.DLL
+DataFile=lw550.GPD
+LanguageMonitor="DYMO LabelWriter 5xx Monitor,LW5XXMON.DLL"
+CoreDriverSections="{D20EA372-DD35-4950-9ED8-A6335AFE79F0},UNIDRV.OEM,UNIDRV_DATA"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; LW 550 Turbo
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[LW_550_TURBO]
+CopyFiles=@lw550t.GPD, LW5XX_OEMUNI, LW5XXMON.DLL
+DataFile=lw550t.GPD
+LanguageMonitor="DYMO LabelWriter 5xx Monitor,LW5XXMON.DLL"
+CoreDriverSections="{D20EA372-DD35-4950-9ED8-A6335AFE79F0},UNIDRV.OEM,UNIDRV_DATA"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; LW 5XL
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[LW_5XL]
+CopyFiles=@lw5xl.GPD, LW5XX_OEMUNI, LW5XXMON.DLL
+DataFile=lw5xl.GPD
+LanguageMonitor="DYMO LabelWriter 5xx Monitor,LW5XXMON.DLL"
+CoreDriverSections="{D20EA372-DD35-4950-9ED8-A6335AFE79F0},UNIDRV.OEM,UNIDRV_DATA"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; LW 550 Pro
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[LW_550_PRO]
+CopyFiles=@lw550pro.GPD, LW5XX_OEMUNI, LW5XXMON.DLL
+DataFile=lw550pro.GPD
+LanguageMonitor="DYMO LabelWriter 5xx Monitor,LW5XXMON.DLL"
+CoreDriverSections="{D20EA372-DD35-4950-9ED8-A6335AFE79F0},UNIDRV.OEM,UNIDRV_DATA"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; LW 5XL Pro
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[LW_5XL_PRO]
+CopyFiles=@lw5xlpro.GPD, LW5XX_OEMUNI, LW5XXMON.DLL
+DataFile=lw5xlpro.GPD
+LanguageMonitor="DYMO LabelWriter 5xx Monitor,LW5XXMON.DLL"
+CoreDriverSections="{D20EA372-DD35-4950-9ED8-A6335AFE79F0},UNIDRV.OEM,UNIDRV_DATA"
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; LW 550 Twin Turbo Pro
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[LW_550_TWIN_PRO]
+CopyFiles=@lw550ttp.GPD, LW5XX_OEMUNI, LW5XXMON.DLL
+DataFile=lw550ttp.GPD
+LanguageMonitor="DYMO LabelWriter 5xx Monitor,LW5XXMON.DLL"
+CoreDriverSections="{D20EA372-DD35-4950-9ED8-A6335AFE79F0},UNIDRV.OEM,UNIDRV_DATA"
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;These sections are to identify the Vista drivers as "Package Aware" to allow them to
+;take advantage of features such as "Package Point-and-Print" in Vista and above
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[PrinterPackageInstallation.x86]
+PackageAware=TRUE
+CoreDriverDependencies={D20EA372-DD35-4950-9ED8-A6335AFE79F0}
+
+[PrinterPackageInstallation.amd64]
+PackageAware=TRUE
+CoreDriverDependencies={D20EA372-DD35-4950-9ED8-A6335AFE79F0}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;  INF GENERAL SECTIONs
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[LW5XXMON.DLL]
+LW5XXMON.DLL,,,0x00000020
+
+[LW5XX_OEMUNI]
+LW5XX.DLL
+LW5XXUI.DLL
+LW5XX.GPD
+LWXL.GPD
+LW5XX.INI
+
+;
+;  Location of source files not in Layout.inf
+;
+
+[DestinationDirs]
+DefaultDestDir=66000
+
+[SourceDisksNames.x86]
+1 = %DiskName%,,,"i386"
+2 = %DiskName%,,,
+
+[SourceDisksNames.amd64]
+1 = %DiskName%,,,"amd64"
+2 = %DiskName%,,,
+
+[SourceDisksFiles]
+LW5XXMON.DLL     = 1
+LW5XX.DLL        = 1
+LW5XXUI.DLL      = 1
+LW5XX.INI        = 2
+LW550.GPD        = 2
+LW550T.GPD       = 2
+LW5XL.GPD        = 2
+LW5XX.GPD        = 2
+LWXL.GPD         = 2
+LW550PRO.GPD     = 2
+LW5XLPRO.GPD     = 2
+LW550TTP.GPD     = 2
+
+;
+; Localizable Strings
+;
+[Strings]
+DYMO                    = "DYMO"
+DiskName                = "DYMO LabelWriter CD-ROM"
