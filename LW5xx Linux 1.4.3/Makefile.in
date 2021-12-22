@@ -14,8 +14,6 @@
 
 @SET_MAKE@
 
-# $Id: Makefile.am 17860 2012-04-23 18:24:53Z pineichen $
-
 # DYMO LabelWriter Drivers
 # Copyright (C) 2008 Sanford L.P.
 
@@ -315,7 +313,7 @@ target_alias = @target_alias@
 top_build_prefix = @top_build_prefix@
 top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
-SUBDIRS = src ppd/Linux docs samples
+SUBDIRS = src ppd docs samples
 EXTRA_DIST = dymo-cups-drivers.spec LICENSE
 all: all-recursive
 
@@ -771,10 +769,6 @@ uninstall-am:
 
 .PRECIOUS: Makefile
 
-
-#
-#  $Id: Makefile.am 17860 2012-04-23 18:24:53Z pineichen $
-#
 
 # Tell versions [3.59,3.63) of GNU make to not export all variables.
 # Otherwise a system limit (for SysV at least) may be exceeded.

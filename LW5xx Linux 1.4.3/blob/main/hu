@@ -1,4 +1,0 @@
-#! /bin/sh
-
-hvar=`uuidgen | sed -e "s/-/_/g"`
-echo h$hvar

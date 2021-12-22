@@ -33,13 +33,13 @@ CPPUNIT_TEST_SUITE_REGISTRATION(LabelManagerFilterTest);
 
 LabelManagerFilterTest::LabelManagerFilterTest()
 {
-  PPDNames_.push_back("../../../ppd/Linux/lwduot.ppd");
-  PPDNames_.push_back("../../../ppd/Linux/lm400.ppd");
-  PPDNames_.push_back("../../../ppd/Linux/lm450.ppd");
-  PPDNames_.push_back("../../../ppd/Linux/lmpc.ppd");
-  PPDNames_.push_back("../../../ppd/Linux/lp350.ppd");
-  PPDNames_.push_back("../../../ppd/Linux/lwduot2.ppd");
-  PPDNames_.push_back("../../../ppd/Linux/lmpc2.ppd");
+  PPDNames_.push_back("../../../ppd/lwduot.ppd");
+  PPDNames_.push_back("../../../ppd/lm400.ppd");
+  PPDNames_.push_back("../../../ppd/lm450.ppd");
+  PPDNames_.push_back("../../../ppd/lmpc.ppd");
+  PPDNames_.push_back("../../../ppd/lp350.ppd");
+  PPDNames_.push_back("../../../ppd/lwduot2.ppd");
+  PPDNames_.push_back("../../../ppd/lmpc2.ppd");
 }
 
 
@@ -160,7 +160,7 @@ LabelManagerFilterTest::testTapeColor()
 void
 LabelManagerFilterTest::testDeviceSettings()
 {
-  ppd_file_t* ppd = ppdOpenFile("../../../ppd/Linux/lwduot.ppd");
+  ppd_file_t* ppd = ppdOpenFile("../../../ppd/lwduot.ppd");
   CPPUNIT_ASSERT(ppd != NULL);
   ppdMarkDefaults(ppd);
   CDriverInitializerLabelManager::ProcessPPDOptions(*Driver_, *LM_, ppd);
@@ -173,7 +173,7 @@ LabelManagerFilterTest::testDeviceSettings()
   CPPUNIT_ASSERT_EQUAL(true,          Driver_->IsSupportAutoCut());
   ppdClose(ppd);
 
-  ppd = ppdOpenFile("../../../ppd/Linux/lwduot2.ppd");
+  ppd = ppdOpenFile("../../../ppd/lwduot2.ppd");
   CPPUNIT_ASSERT(ppd != NULL);
   ppdMarkDefaults(ppd);
   CDriverInitializerLabelManager::ProcessPPDOptions(*Driver_, *LM_, ppd);
@@ -186,7 +186,7 @@ LabelManagerFilterTest::testDeviceSettings()
   CPPUNIT_ASSERT_EQUAL(true,          Driver_->IsSupportAutoCut());
   ppdClose(ppd);
 
-  ppd = ppdOpenFile("../../../ppd/Linux/lm450.ppd");
+  ppd = ppdOpenFile("../../../ppd/lm450.ppd");
   CPPUNIT_ASSERT(ppd != NULL);
   ppdMarkDefaults(ppd);
   CDriverInitializerLabelManager::ProcessPPDOptions(*Driver_, *LM_, ppd);
@@ -199,7 +199,7 @@ LabelManagerFilterTest::testDeviceSettings()
   CPPUNIT_ASSERT_EQUAL(true,          Driver_->IsSupportAutoCut());
   ppdClose(ppd);
 
-  ppd = ppdOpenFile("../../../ppd/Linux/lm400.ppd");
+  ppd = ppdOpenFile("../../../ppd/lm400.ppd");
   CPPUNIT_ASSERT(ppd != NULL);
   ppdMarkDefaults(ppd);
   CDriverInitializerLabelManager::ProcessPPDOptions(*Driver_, *LM_, ppd);
@@ -211,7 +211,7 @@ LabelManagerFilterTest::testDeviceSettings()
   CPPUNIT_ASSERT_EQUAL(size_t(133),   Driver_->GetMinPageLines());
   CPPUNIT_ASSERT_EQUAL(true,          Driver_->IsSupportAutoCut());
 
-  ppd = ppdOpenFile("../../../ppd/Linux/lp350.ppd");
+  ppd = ppdOpenFile("../../../ppd/lp350.ppd");
   CPPUNIT_ASSERT(ppd != NULL);
   ppdMarkDefaults(ppd);
   CDriverInitializerLabelManager::ProcessPPDOptions(*Driver_, *LM_, ppd);
@@ -223,7 +223,7 @@ LabelManagerFilterTest::testDeviceSettings()
   CPPUNIT_ASSERT_EQUAL(size_t(133),   Driver_->GetMinPageLines());
   CPPUNIT_ASSERT_EQUAL(false,         Driver_->IsSupportAutoCut());
 
-  ppd = ppdOpenFile("../../../ppd/Linux/lmpc.ppd");
+  ppd = ppdOpenFile("../../../ppd/lmpc.ppd");
   CPPUNIT_ASSERT(ppd != NULL);
   ppdMarkDefaults(ppd);
   CDriverInitializerLabelManager::ProcessPPDOptions(*Driver_, *LM_, ppd);
@@ -236,7 +236,7 @@ LabelManagerFilterTest::testDeviceSettings()
   CPPUNIT_ASSERT_EQUAL(false,         Driver_->IsSupportAutoCut());
   ppdClose(ppd);
 
-  ppd = ppdOpenFile("../../../ppd/Linux/lmpc2.ppd");
+  ppd = ppdOpenFile("../../../ppd/lmpc2.ppd");
   CPPUNIT_ASSERT(ppd != NULL);
   ppdMarkDefaults(ppd);
   CDriverInitializerLabelManager::ProcessPPDOptions(*Driver_, *LM_, ppd);

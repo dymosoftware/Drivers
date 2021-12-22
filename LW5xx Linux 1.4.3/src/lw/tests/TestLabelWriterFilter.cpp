@@ -35,7 +35,7 @@ CPPUNIT_TEST_SUITE_REGISTRATION(LabelWriterFilterTest);
 void
 LabelWriterFilterTest::setUp()
 {
-  ppd_ = ppdOpenFile("../../../ppd/Linux/lwtt.ppd");
+  ppd_ = ppdOpenFile("../../../ppd/lwtt.ppd");
   CPPUNIT_ASSERT(ppd_ != NULL);
 
   ppdMarkDefaults(ppd_);
