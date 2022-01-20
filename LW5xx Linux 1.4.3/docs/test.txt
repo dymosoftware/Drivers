@@ -1,2 +1,0 @@
-Printer Test Page
-Hello, World!
