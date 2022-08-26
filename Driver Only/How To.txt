@@ -1,0 +1,12 @@
+Please remember follows:
+Bypass is a special test mode. it is disabled by default and it is not public and special test version for the customer.
+It should not distribute to public.
+
+The step thru to work-around is:
+1. Uninstall printer driver verion #166.
+2. Install printer driver verion #167.
+3. Execute LW5xx_V2_enable_bypass.reg to enable bypass mode on citrix.
+
+NOTE:
+1. Execute LW5xx_V2_disabel_bypass.reg to revert enabled bypass mode on citrix in future.
+2. If you add network printer to Citrix OS directly, you will have problems. Driver can communicate with network printer directly, so bypass mode will break direct printing since all retry/recovery mechanisms are disabled in bypass mode.
